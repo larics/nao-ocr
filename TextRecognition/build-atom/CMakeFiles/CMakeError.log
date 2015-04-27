@@ -1,0 +1,53 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/mirko/nao/workspace/TextRecognition/build-atom/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2469771697/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2469771697.dir/build.make CMakeFiles/cmTryCompileExec2469771697.dir/build
+make[1]: Entering directory `/home/mirko/nao/workspace/TextRecognition/build-atom/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/mirko/nao/workspace/TextRecognition/build-atom/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2469771697.dir/CheckSymbolExists.c.o
+/home/mirko/nao/devtools/linux64-nao-atom-cross-toolchain-1.14.5/cross/bin/i686-aldebaran-linux-gnu-gcc   --sysroot /home/mirko/nao/devtools/linux64-nao-atom-cross-toolchain-1.14.5//sysroot/ -pipe -fomit-frame-pointer -fno-align-jumps -fno-align-functions -fno-align-labels -fno-align-loops -m32 -mtune=generic -DOE_CROSS_BUILD    -o CMakeFiles/cmTryCompileExec2469771697.dir/CheckSymbolExists.c.o   -c /home/mirko/nao/workspace/TextRecognition/build-atom/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec2469771697
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2469771697.dir/link.txt --verbose=1
+/home/mirko/nao/devtools/linux64-nao-atom-cross-toolchain-1.14.5/cross/bin/i686-aldebaran-linux-gnu-gcc   --sysroot /home/mirko/nao/devtools/linux64-nao-atom-cross-toolchain-1.14.5//sysroot/ -pipe -fomit-frame-pointer -fno-align-jumps -fno-align-functions -fno-align-labels -fno-align-loops -m32 -mtune=generic -DOE_CROSS_BUILD   -Wl,--sysroot,/home/mirko/nao/devtools/linux64-nao-atom-cross-toolchain-1.14.5//sysroot/ CMakeFiles/cmTryCompileExec2469771697.dir/CheckSymbolExists.c.o  -o cmTryCompileExec2469771697 -rdynamic 
+CMakeFiles/cmTryCompileExec2469771697.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1): undefined reference to `pthread_create'
+collect2: ld returned 1 exit status
+make[1]: *** [cmTryCompileExec2469771697] Error 1
+make[1]: Leaving directory `/home/mirko/nao/workspace/TextRecognition/build-atom/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec2469771697/fast] Error 2
+
+File /home/mirko/nao/workspace/TextRecognition/build-atom/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/mirko/nao/workspace/TextRecognition/build-atom/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec4195373487/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4195373487.dir/build.make CMakeFiles/cmTryCompileExec4195373487.dir/build
+make[1]: Entering directory `/home/mirko/nao/workspace/TextRecognition/build-atom/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/mirko/nao/workspace/TextRecognition/build-atom/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4195373487.dir/CheckFunctionExists.c.o
+/home/mirko/nao/devtools/linux64-nao-atom-cross-toolchain-1.14.5/cross/bin/i686-aldebaran-linux-gnu-gcc   --sysroot /home/mirko/nao/devtools/linux64-nao-atom-cross-toolchain-1.14.5//sysroot/ -pipe -fomit-frame-pointer -fno-align-jumps -fno-align-functions -fno-align-labels -fno-align-loops -m32 -mtune=generic -DOE_CROSS_BUILD -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec4195373487.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec4195373487
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4195373487.dir/link.txt --verbose=1
+/home/mirko/nao/devtools/linux64-nao-atom-cross-toolchain-1.14.5/cross/bin/i686-aldebaran-linux-gnu-gcc   --sysroot /home/mirko/nao/devtools/linux64-nao-atom-cross-toolchain-1.14.5//sysroot/ -pipe -fomit-frame-pointer -fno-align-jumps -fno-align-functions -fno-align-labels -fno-align-loops -m32 -mtune=generic -DOE_CROSS_BUILD -DCHECK_FUNCTION_EXISTS=pthread_create  -Wl,--sysroot,/home/mirko/nao/devtools/linux64-nao-atom-cross-toolchain-1.14.5//sysroot/ CMakeFiles/cmTryCompileExec4195373487.dir/CheckFunctionExists.c.o  -o cmTryCompileExec4195373487 -rdynamic -lpthreads 
+/home/mirko/nao/devtools/linux64-nao-atom-cross-toolchain-1.14.5/cross/bin/../lib/gcc/i686-aldebaran-linux-gnu/4.5.3/../../../../i686-aldebaran-linux-gnu/bin/ld: cannot find -lpthreads
+collect2: ld returned 1 exit status
+make[1]: *** [cmTryCompileExec4195373487] Error 1
+make[1]: Leaving directory `/home/mirko/nao/workspace/TextRecognition/build-atom/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec4195373487/fast] Error 2
+
+

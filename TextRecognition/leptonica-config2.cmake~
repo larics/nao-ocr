@@ -1,0 +1,4 @@
+clean(LEPTONICA)
+find_package(PkgConfig)
+pkg_check_modules(LEPTONICA lept)
+export_lib_pkgconfig(LEPTONICA)

@@ -1,0 +1,5 @@
+clean(LEPTONICA)
+find_package(PkgConfig)
+SET(ENV(PKG_CONFIG_PATH) "/home/nao/devtools/tess_lept/usr/lib/pkgconfig")
+pkg_check_modules(LEPTONICA lept)
+export_lib_pkgconfig(LEPTONICA)

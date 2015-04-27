@@ -1,0 +1,4 @@
+clean(LEPTONICA)
+fpath(LEPTONICA leptonica/leptonica.h PATHS /home/mirko/nao/devtools/tess_lept/usr/include)
+flib(LEPTONICA leptonica PATHS /home/mirko/nao/devtools/tess_lept/usr/lib)
+export_header(LEPTONICA)

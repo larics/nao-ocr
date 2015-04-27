@@ -1,0 +1,12 @@
+/*-----------DEFAULT PARAMETERS----------*/
+NAO_IP=yvette.local
+NAO_PORT=9559
+NAO_MOVEMENT=FALSE
+INPUT_MODE=FILE
+OUTPUT_MODE=SPEAK
+OCR_MODE=SEGMENTED
+LANGUAGE=eng
+RESULT_LOCATION=/home/nao/mirkokot/result.txt
+PICTURE_LOCATION=/home/nao/mirkokot/SLIKE/laptop.png
+DEBUG=FALSE
+DEBUG_LOCATION=/home/mirko/nao/workspace/Output/
