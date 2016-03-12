@@ -1,4 +1,0 @@
-clean(TESSERACT)
-fpath(TESSERACT tesseract/baseAPI.h PATHS /home/mirko/nao/devtools/tess_lept/usr/include/tesseract)
-flib(TESSERACT tesseract PATHS /home/mirko/nao/devtools/tess_lept/usr/lib/)
-export_header(TESSERACT)

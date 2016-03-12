@@ -1,4 +1,0 @@
-clean(TESSERACT)
-find_package(PkgConfig)
-pkg_check_modules(FOO tesseract-3.02)
-export_lib_pkgconfig(FOO)
