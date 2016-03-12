@@ -1,2 +1,0 @@
-/home/mirko/nao/workspace/TextRecognition/build-pc/CMakeFiles/OcrModule.dir
-/home/mirko/nao/workspace/TextRecognition/build-pc/CMakeFiles/naoocr.dir
