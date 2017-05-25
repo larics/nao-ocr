@@ -3,15 +3,6 @@
 ---------------
 NAOOCR is a software module that enables the Aldebaran NAO ATOM humanoid robot to read text from an image. The module is entirely written in c++ and can be directly run on the robot. 
 
-## Requirements
-----------------------
-For building Tesseract and Leptonica on OpenNAO:
-* m4
-* automake
-* autoconfig
-* libtool
-
-
 ## Building and setup as a remote module
 ---
 Remote module is run on the remote computer that is connected to the robot via Ethernet or WiFi (we suggest Ethernet as image from the camera is sent to the module). 
