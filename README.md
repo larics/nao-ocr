@@ -1,10 +1,10 @@
-#NAO OCR
-##Summary
+NAO OCR
+---
+Summary
 ---------------
 NAOOCR is a software module that enables the Aldebaran NAO ATOM humanoid robot to read text from an image. The module is entirely written in c++ and can be directly run on the robot. 
 
 ## Building and setup as a remote module
----
 Remote module is run on the remote computer that is connected to the robot via Ethernet or WiFi (we suggest Ethernet as image from the camera is sent to the module). 
 Building a remote module is the easiest way to set up and try the nao-ocr package. 
 ### Dependencies and requirements
@@ -30,7 +30,6 @@ To run the module, go to build/sdk/bin and run the OcrModule by passing the robo
 The module should be registered in the naoqi (you can check via the robot web-page).
 
 ## Building and setup as a local module
----
 This requires a bit more work, as you need to build Tesseract and Leptonica for NAO's operating system. To do so, you need to set up a OpenNAO virtual machine using the OpenNAO system image (make sure it corresponds to the version of naoqi you have on the robot). You can use this guide for that:
 http://doc.aldebaran.com/2-1/dev/tools/vm-setup.html
 
@@ -57,8 +56,7 @@ Workflow should be as follows:
  7. Transfer the OcrModule.so to the robot and add it to autoload.ini, then restart the robot.
  8. On your machine, run naoocr, provide the correct ip of the robot and see if everything is running.
 
-##Usage
----
+## Usage
 The module is called by the naoocr program. For the naoocr program to run there must be a nao.config file in the same directory as the program. This file defines the default parameters for the program.
 
 * NAO_IP - the NAO IP address
