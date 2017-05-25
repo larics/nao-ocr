@@ -10,7 +10,7 @@ option(TXTREC_IS_REMOTE
   "ON - OFF"
   ON)
 
-set(CMAKE_CXX_FLAGS "-std=c++0x")
+set(CMAKE_CXX_FLAGS "-std=gnu++0x")
 
 aux_source_directory(. SRC_LIST)
 list(REMOVE_ITEM SRC_LIST "./naoocr.cpp")
