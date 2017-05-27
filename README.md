@@ -14,6 +14,7 @@ Nao-ocr is built and tested on Ubuntu 14.04 and 16.04. For 16.04 you need to dow
  - OpenCV 2.4.9
  - Tesseract 3.02
  - Leptonica
+ - gcc 4.8
 
 ### Build nao-ocr as remote module
 Download and install naoqi C++ SDK (v2.1.4) using this guide:
