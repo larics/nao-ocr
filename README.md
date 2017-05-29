@@ -45,6 +45,38 @@ http://doc.aldebaran.com/2-1/dev/tools/vm-setup.html
  - Naoqi C++ cross-compilation SDK (v2.1.4)
 
 ### Build local module
+Steps that are to be performed on the virtual machine are denoted VM, and steps on the host machine (i.e. your computer) are denoted HM. 
+
+#### Building nao-ocr dependencies on the VM
+
+Pull tesseract and leptonica sources from github (use https as you probably don't have ssh keys in the VM):
+$ (VM): cd worktree
+$ (VM)/worktree: git clone https://github.com/tesseract-ocr/tesseract.git
+$ (VM)/worktree: git clone https://github.com/DanBloomberg/leptonica.git
+
+You can use specific releases of the libraries by checking out a tag:
+$ (VM)/worktree/tesseract: git tag -l
+$ (VM)/worktree/tesseract: git checkout tags/tag_name
+
+We used leptonica v1.73 and tesseract v3.02.02. 
+
+Prepare local directories for installation of leptonica and tesseract files as we need those to build our local module:
+
+$ (VM)/worktree: mkdir leptonica_install tessract_install
+
+Now, build leptonica first. Make sure to set the install directory you just created by using the --prefix flag:
+$ (VM)/worktree: cd leptonica
+$ (VM)/worktree/leptonica: ./configure --prefix=/home/nao/worktree/leptonica_install
+$ (VM)/worktree/leptonica: make
+$ (VM)/worktree/leptonica: make install
+
+Next, build tesseract. You need to tell the system where leptonica is and also specify to install tesseract in the directory you created:
+$ (VM)/worktree: cd tesseract
+$ (VM)/worktree/tesseract: ./autogen.sh
+$ (VM)/worktree/tesseract: LIBLEPT_HEADERSDIR=/home/nao/worktree/leptonica_install/include/ ./configure --prefix=/home/nao/worktree/tesseract_install --with-extra-libraries=/home/nao/worktree/leptonica_install/lib/
+$ (VM)/worktree/tesseract: make
+$ (VM)/worktree/tesseract: make install
+
 Workflow should be as follows:
 
  1. Install autotools in the VM
