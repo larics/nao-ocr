@@ -1,5 +1,6 @@
-#NAO OCR
-##Summary
+# NAO OCR
+
+## Summary
 ---------------
 NAOOCR is a software module that enables the Aldebaran NAO ATOM humanoid robot to read text from an image. The module is entirely written in c++ and can be directly run on the robot. 
 
